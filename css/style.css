@@ -1,24 +1,16 @@
 @charset "utf-8";
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline-style: none;
-}
-ul{
-    list-style: none;
-}
-a{
-    color: #000;
-    text-decoration: none;
-}
-img{
-    border: 0;
-    vertical-align: middle;
-}
-html{
-    font-size: 16px;
-}
-body{
-    
-}
+@import url(layout.css);
+/* header */
+@import url(header.css);
+/* visual */
+@import url(visual.css);
+/* goods */
+@import url(goods.css);
+/* company */
+@import url(company.css);
+/* news */
+@import url(news.css);
+/* info */
+@import url(info.css);
+/* footer */
+@import url(footer.css);
