@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url(font.css);
 @import url(layout.css);
 /* header */
 @import url(header.css);
