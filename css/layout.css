@@ -30,6 +30,8 @@ body {
 
 /* 공통클래스 */
 .wrap {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 .inner {
 }

@@ -1,1 +1,98 @@
-@charset "utf-8";
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  overflow: hidden;
+  transition: height 0.5s;
+  padding: 0 100px;
+  z-index: 9999;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  /* 투명하기 때문에 보이지 않음 */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.header-active {
+  height: 260px !important;
+  box-shadow: 0px 12px 12px -17px rgba(0, 0, 0, 0.25);
+}
+.header-active::before {
+  opacity: 1;
+}
+
+.logo {
+  margin-top: 35px;
+}
+
+.nav {
+  margin-left: 240px;
+}
+.gnb {
+  display: flex;
+  gap: 0 50px;
+}
+.gnb > li {
+}
+.gnb > li > a {
+  display: block;
+  line-height: 100px;
+
+  font-size: 18px;
+  color: #222;
+  letter-spacing: -0.3px;
+  font-weight: 700;
+  font-family: "Noto Sans KR";
+  white-space: nowrap;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.submenu {
+}
+.submenu li {
+}
+.submenu li a {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  color: #08151d;
+  font-weight: 400;
+  font-family: "Noto Sans KR";
+  white-space: nowrap;
+}
+.submenu li a:hover {
+  color: #999;
+}
+
+.side-wrap {
+  padding: 18px;
+  background: #f5f9ff;
+  border-radius: 36px;
+  margin-top: 20px;
+}
+
+.member {
+  display: flex;
+  gap: 0 26px;
+}
+.member li {
+}
+.member li a {
+  font-size: 13px;
+  color: #7e7e7e;
+  font-weight: 700;
+  font-family: "Noto Sans KR";
+}
