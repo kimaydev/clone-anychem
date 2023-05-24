@@ -1,8 +1,4 @@
-/* 
-    웹브라우저에 html, css, js, image를 모두 불러들여 렌더링 준비가 끝나고
-    function의 블럭 안쪽 {}를 실행한다
-*/
-window.onload = function () {
+window.addEventListener("load", function () {
   // nav 에 마우스오버 시 header 높이 변화(-> 260px)
   // nav 에 마우스아웃 시 header 높이 변화(-> 100px)
   // ① header를 js로 저장해보자(변수 정의하기)
@@ -30,4 +26,4 @@ window.onload = function () {
     이처럼 js로 style의 수치 변경이 가능하나 추천하는 방법은 아니므로
     class를 추가·제거 하는 방식으로 관리하는 것이 좋다
 */
-};
+});
