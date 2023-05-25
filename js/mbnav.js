@@ -1,6 +1,7 @@
 window.addEventListener("load", function () {
   // 모바일 버튼 기능
   const mbNav = document.querySelector(".mb-nav");
+  const mbGnb = document.querySelector(".mb-gnb");
   // .mb-nav를 mbNav라는 변수에 저장(할당/대입)
   const mbNavActive = "mb-nav-active";
   const mbWrap = document.querySelector(".mb-wrap");
@@ -24,6 +25,10 @@ window.addEventListener("load", function () {
       mbNav.classList.remove(mbNavActive);
       mbWrap.classList.remove(mbWrapActive);
     }
+    // Reset
+    resetSubmenu();
+    // 변수 초기화
+    sideOpenNumber = undefined;
   });
   // 화면의 리사이즈를 체크해서 처리
   window.addEventListener("resize", function () {
@@ -32,35 +37,87 @@ window.addEventListener("load", function () {
     if (winWidth > mbWidth) {
       mbNav.classList.remove(mbNavActive);
       mbWrap.classList.remove(mbWrapActive);
+      // Reset
+      resetSubmenu();
+      // 변수 초기화
+      sideOpenNumber = undefined;
     } // 화면 넓이가 1024보다 크면 active 클래스를 삭제한다
   });
+  mbGnb.addEventListener("click", function (event) {
+    // 이벤트 전달을 막음
+    event.stopPropagation();
+  });
+  // nav 영역 밖 클릭 시 메뉴 닫힘
+  mbWrap.addEventListener("click", function (event) {
+    mbNav.classList.remove(mbNavActive);
+    mbWrap.classList.remove(mbWrapActive);
+    // Reset
+    resetSubmenu();
+    // 변수 초기화
+    sideOpenNumber = undefined;
+  });
   // 모바일 아코디언 메뉴
+  const sideLis = document.querySelectorAll(".side-menu > li");
   const sideMenuA = document.querySelectorAll(".side-menu > li > a");
   const sideSubMenu = document.querySelectorAll(".side-menu > li > .submenu");
+  const sideMenuOffset = 53;
+  let sideOpenNumber;
 
-  // sideMenuA 의 각각을 클릭하면, 클릭되어진 순간
-  // index 값을 console.log 에 출력해 주세요.
-  // for 를 사용해도 좋구요,
-  // forEach 를 사용해도 좋아요.
+  // 각 서브메뉴가 펼쳐졌을 때의 높이값을 저장
+  const sideOpenHeightArray = [];
+
+  // 각 서브메뉴 높이값 확인하기
+  sideSubMenu.forEach((item, index) => {
+    sideOpenHeightArray[index] = item.scrollHeight + sideMenuOffset;
+    // console.log(sideOpenHeightArray);
+  });
+  // 모바일 아코디언 메뉴 클릭 이벤트
   sideMenuA.forEach((item, index) => {
     item.addEventListener("click", function (event) {
-      // a 태그의 href 를 막는다.
+      // a태그 웹페이지 갱신 막기
       event.preventDefault();
-      changeSubmenu(index);
+      showSubMenu(index);
     });
   });
+  function resetSubmenu() {
+    // 모든 li의 높이를 53으로 지정 (Reset)
+    sideLis.forEach((item) => {
+      // item.style.height = sideMenuOffset + "px";
+      anime({
+        targets: item,
+        height: 53,
+        easing: "easeInOutQuad",
+        duration: 500,
+      });
+    });
+  }
+  function showSubMenu(_showNumber) {
+    // Reset
+    resetSubmenu();
 
-  function changeSubmenu(_index) {
-    sideSubMenu.forEach((item, index) => {
-      if (_index === index) {
-        if (item.style.display === "block") {
-          item.style.display = "none";
-        } else {
-          item.style.display = "block";
-        }
-      } else {
-        item.style.display = "none";
+    if (_showNumber === sideOpenNumber) {
+      // _showNumber와 sideOpenNumber 의 인덱스 번호가 같을 때 실행
+      // 변수 초기화
+      sideOpenNumber = undefined;
+      // return으로 함수 실행 중단시킴.
+      // 문제: 똑같은 버튼 클릭 시 이벤트가 호출 안되는 현상이 발생하므로 return 하기 전에 sideOpenNumber를 초기화
+      return;
+    }
+    // li의 높이를 변경
+    sideLis.forEach((item, index) => {
+      item.style.height = sideMenuOffset;
+      if (_showNumber === index) {
+        // item.style.height = sideOpenHeightArray[_showNumber] + "px";
+        anime({
+          targets: item,
+          height: sideOpenHeightArray[_showNumber],
+          easing: "easeInOutQuad",
+          duration: 500,
+        });
       }
     });
+
+    // 열린 번호를 sideOpenNumber에 보관함
+    sideOpenNumber = _showNumber;
   }
 });
