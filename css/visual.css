@@ -1,1 +1,14 @@
 @charset "utf-8";
+
+.visual {
+}
+.visual .sw-visual {
+}
+.visual .sw-visual .swiper-wrapper {
+}
+.visual .sw-visual .swiper-wrapper .swiper-slide {
+  height: 780px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
