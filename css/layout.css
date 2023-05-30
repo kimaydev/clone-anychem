@@ -17,12 +17,11 @@ img {
   vertical-align: middle;
 }
 html {
-  font-size: 16px;
+  font-size: 10px;
 }
 body {
   font-family: "Noto Sans KR", "Nanum Gothic", sans-serif;
-  font-size: 13px;
-  line-height: 1.6;
+  line-height: 1.2;
   letter-spacing: -0.3px;
   color: #777;
   word-break: keep-all;
@@ -34,4 +33,7 @@ body {
   margin: 0 auto;
 }
 .inner {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
 }
