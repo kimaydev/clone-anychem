@@ -2,6 +2,7 @@
 
 .visual {
   position: relative;
+  padding-top: 100px;
 }
 .visual .sw-visual {
 }
@@ -15,7 +16,7 @@
 }
 .visual .sw-visual-control {
   position: absolute;
-  bottom: 50px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -27,7 +28,6 @@
 }
 .visual .sw-visual-control .sw-visual-pg .swiper-pagination-bullet {
   display: inline-block;
-  font-size: 1.6rem;
   background: none;
   width: 30px;
   height: 100%;
@@ -35,6 +35,9 @@
   color: rgba(255, 255, 255, 0.4);
   opacity: 1;
   transition: all 0.5s;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 1.3rem;
+  text-align: left;
 }
 .visual .sw-visual-control .sw-visual-pg .swiper-pagination-bullet::after {
   content: "";
@@ -63,14 +66,21 @@
 }
 .visual .visual-txt {
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
+  max-width: 1500px;
   width: 100%;
-  height: 100%;
+}
+.visual .visual-txt .inner{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: none;
+  width: auto;
+  margin: 0;  
 }
 .visual .visual-txt .inner .visual-title {
   font-size: 4.7rem;
@@ -129,5 +139,12 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* visual 반응형 */
+@media screen and (max-width: 1024px) {
+  .visual {
+    padding-top: 75px;
   }
 }

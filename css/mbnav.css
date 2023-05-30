@@ -68,7 +68,8 @@
 }
 .side-menu > li > .submenu > li > a {
   display: block;
-  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 2;
   color: #777;
   text-align: left;
 }
@@ -76,8 +77,8 @@
 .mb-nav {
   display: none;
   position: fixed;
-  top: 28px;
-  right: 15px;
+  top: 30px;
+  right: 30px;
   z-index: 99999;
   width: 25px;
   height: 25px;

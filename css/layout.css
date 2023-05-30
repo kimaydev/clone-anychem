@@ -16,8 +16,13 @@ img {
   border: 0;
   vertical-align: middle;
 }
+html, body{
+  min-width: 340px;
+  overflow-x: hidden;
+}
 html {
   font-size: 10px;
+  
 }
 body {
   font-family: "Noto Sans KR", "Nanum Gothic", sans-serif;
@@ -36,4 +41,12 @@ body {
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
+}
+
+/* 공통 레이아웃 반응형 */
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 9px;
+  }
 }
