@@ -28,15 +28,16 @@ window.addEventListener("load", function () {
       pagination: {
         el: ".sw-visual-pg",
         clickable: true,
+        renderBullet: function (index, className) {
+          if(index < 9){
+            return '<span class="' + className + '">' + 0 + (index + 1) + "</span>";
+          }else{
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          }
+        },
       },
     });
-    // 위의 구문을 통해서 slide가 완료되면 .sw-visual-pg에는 span이 생성된다
-    // .sw-visual-pg .swiper-pagination-bullet이 생성됨
-    const swVisualBullets = document.querySelectorAll(
-      ".sw-visual-pg .swiper-pagination-bullet"
-    );
-    swVisualBullets.forEach((item, index, arr) => {
-      item.innerHTML = `<em>${index < 9 ? "0" : ""}${index + 1}</em>`;
-    });
+		// 위의 구문을 통해서 slide가 완료되면 .sw-visual-pg에는 span이 생성된다
+		// .sw-visual-pg .swiper-pagination-bullet이 생성됨
   }
 });

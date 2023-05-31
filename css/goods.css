@@ -1,1 +1,103 @@
 @charset "utf-8";
+
+.goods {
+}
+.goods .inner {
+}
+.goods .goods-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.goods .goods-wrap .goods-menu {
+}
+.goods .goods-wrap .goods-menu {
+  width: 370px;
+  /* background: pink; */
+}
+.goods .goods-wrap .goods-menu .goods-txt-box {
+}
+.goods .goods-wrap .goods-menu .goods-txt-box .goods-title {
+}
+.goods .goods-wrap .goods-menu .goods-txt-box .goods-desc {
+}
+.goods .goods-wrap .goods-menu .goods-list {
+}
+.goods .goods-wrap .goods-menu .goods-list > li {
+}
+.goods .goods-wrap .goods-menu .goods-list > li > a {
+  display: block;
+  font-size: 1.7rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.goods .goods-wrap .goods-menu .sw-goods-control {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 15px;
+}
+.goods .goods-wrap .goods-menu .sw-goods-control button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  line-height: 1;
+}
+.goods .goods-wrap .goods-menu .sw-goods-control .sw-goods-prev {
+}
+.goods .goods-wrap .goods-menu .sw-goods-control .sw-goods-pause {
+  font-size: 2rem;
+  padding: 0 10px;
+}
+.goods .goods-wrap .goods-menu .sw-goods-control .sw-goods-next {
+}
+.goods .goods-wrap .goods-slide {
+  width: calc(100% - 370px);
+  padding-left: 50px;
+}
+.goods .goods-wrap .goods-slide .sw-goods {
+}
+.goods .goods-wrap .goods-slide .sw-goods .swiper-slide {
+  width: calc(100% / 3);
+}
+.goods .goods-wrap .goods-slide .good-link {
+  display: block;
+}
+.goods .goods-wrap .goods-slide .sw-goods .good-link .good-item {
+  height: 550px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 6px 31px 2px rgba(0, 0, 0, 0.2);
+}
+.goods .goods-wrap .goods-slide .sw-goods .good-link .good-item .good-item-img {
+}
+.goods
+  .goods-wrap
+  .goods-slide
+  .sw-goods
+  .good-link
+  .good-item
+  .good-item-img
+  img {
+}
+.goods .goods-wrap .goods-slide .sw-goods .good-link .good-item .good-item-txt {
+}
+.goods
+  .goods-wrap
+  .goods-slide
+  .sw-goods
+  .good-link
+  .good-item
+  .good-item-txt
+  p {
+}
+.goods
+  .goods-wrap
+  .goods-slide
+  .sw-goods
+  .good-link
+  .good-item
+  .good-item-txt
+  p
+  span {
+}
