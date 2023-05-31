@@ -2,28 +2,12 @@ window.addEventListener("load", function () {
   let header = document.querySelector(".header");
   let nav = document.querySelector(".header .header-right .nav");
 
-  /* 원본코드
   nav.addEventListener("mouseenter", function () {
     header.classList.add("header-active");
-  });  
-  // nav 마우스아웃 처리
-  nav.addEventListener("mouseleave", function () {
-    header.classList.remove("header-active");
   });
-  */
-  nav.addEventListener("mouseenter", function () {
-    header.classList.add("header-active");
-    if(header.classList.contains("header-active")){
-      header.addEventListener("mouseover", function(){
-        header.classList.add("test");
-      });
-    }
-    header.classList.remove("test");
-  });  
   // nav 마우스아웃 처리
   header.addEventListener("mouseleave", function () {
     header.classList.remove("header-active");
-    header.classList.remove("test");
   });
 
   let gnbA = document.querySelectorAll(".gnb > li");
