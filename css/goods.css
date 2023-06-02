@@ -50,6 +50,7 @@
   width: 73%;
   float: right;
   margin-right: -100px;
+  overflow: hidden;
 }
 .goods .goods-slide .sw-goods .swiper-slide .good-link {
   display: block;
@@ -174,6 +175,6 @@
   line-height: 1.6;
   color: #777;
 }
-.focus{
-	color: red;
+.focus {
+  color: red;
 }

@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
   let swGoods;
-	const SLIDECOUNT = 4;
+  // const SLIDECOUNT = 4;
   // ① async로 JSON 불러오기
   let getData = async function () {
     try {
@@ -21,9 +21,9 @@ window.addEventListener("load", function () {
   function makeSlide(_data) {
     let html = ``;
     let copyArr = [..._data.goods];
-    if (_data.goods.length <= SLIDECOUNT) {
-      copyArr = [..._data.goods, ..._data.goods];
-    }
+    // if (_data.goods.length <= SLIDECOUNT) {
+    //   copyArr = [..._data.goods, ..._data.goods];
+    // }
     // swiper slide loop가 4개 미만이면 동작하지 않는 현상이 발생하여 배열을 2번 사용함
     copyArr.forEach((item, index) => {
       let tag = `
@@ -61,12 +61,12 @@ window.addEventListener("load", function () {
         nextEl: ".sw-goods-next",
       },
     });
-    swGoods.on("slideChange", function () {
-      let count = this.realIndex % SLIDECOUNT;
-      focusMenu(count);
-    });
+    // swGoods.on("slideChange", function () {
+    //   let count = this.realIndex % SLIDECOUNT;
+    //   focusMenu(count);
+    // });
   }
-	function focusMenu(_index) {
+  function focusMenu(_index) {
     let lis = document.querySelectorAll(".goods-list li a");
     lis.forEach((item, index, arr) => {
       if (index === _index) {
@@ -100,6 +100,22 @@ window.addEventListener("load", function () {
         swGoods.slideToLoop(index);
       };
     });
-  }  
+  }
   getData();
+  let bt = this.document.querySelector(".sw-goods-pause");
+  let icon = bt.querySelector(".fa-pause");
+  let swGoodsState = "play";
+  bt.onclick = () => {
+    if (swGoodsState === "play") {
+      // 슬라이드 멈춤
+      swGoods.autoplay.stop();
+      swGoodsState = "stop";
+      icon.classList.add("fa-play");
+    } else {
+      // 슬라이드 재생
+      swGoods.autoplay.start();
+      swGoodsState = "play";
+      icon.classList.remove("fa-play");
+    }
+  };
 });
