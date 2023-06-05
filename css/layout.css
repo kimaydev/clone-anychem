@@ -50,7 +50,7 @@ section {
   line-height: 1.3;
   font-weight: 700;
   color: #000;
-	margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 .section-title strong {
   color: #0072ff;
@@ -58,7 +58,7 @@ section {
 .section-desc {
   font-size: 1.7rem;
   line-height: 1.6;
-	margin-bottom: 80px;
+  margin-bottom: 55px;
 }
 
 /* 공통 레이아웃 반응형 */

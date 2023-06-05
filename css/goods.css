@@ -1,14 +1,15 @@
 @charset "utf-8";
 
 .goods {
+  position: relative;
   overflow: hidden;
 }
 .goods .inner {
   position: relative;
 }
 .goods .goods-wrap {
-  position: absolute;
-  top: 35px;
+  margin-top: 20px;
+  width: 330px;
 }
 .goods .goods-wrap .goods-menu {
 }
@@ -24,15 +25,40 @@
 }
 .goods .goods-wrap .goods-menu .goods-list > li > a {
   display: block;
+  position: relative;
   font-size: 1.7rem;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.2);
+  padding: 7px 0;
+  transition: padding 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.goods .goods-wrap .goods-menu .goods-list > li a::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: calc(50% - 0.5px);
+  width: 210px;
+  height: 1px;
+  background: #0072ff;
+  opacity: 0;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.goods .goods-wrap .goods-menu .goods-list > li > a.focus {
+  color: #000;
+  padding-left: 30px;
+}
+.goods .goods-wrap .goods-menu .goods-list > li a.focus::before {
+  left: -210px;
+  opacity: 1;
 }
 .goods .goods-wrap .goods-menu .sw-goods-control {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 0 15px;
+  margin-top: 20px;
+  margin-left: 15px;
 }
 .goods .goods-wrap .goods-menu .sw-goods-control button {
   background: transparent;
@@ -47,9 +73,10 @@
   padding: 0 10px;
 }
 .goods .goods-slide {
+  position: absolute;
+  top: 106px;
+  right: -100px;
   width: 73%;
-  float: right;
-  margin-right: -100px;
   overflow: hidden;
 }
 .goods .goods-slide .sw-goods .swiper-slide .good-link {
@@ -174,7 +201,4 @@
   font-size: 1.4rem;
   line-height: 1.6;
   color: #777;
-}
-.focus {
-  color: red;
 }
