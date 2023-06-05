@@ -3,6 +3,7 @@
 .goods {
   position: relative;
   overflow: hidden;
+  padding-bottom: 70px;
 }
 .goods .inner {
   position: relative;

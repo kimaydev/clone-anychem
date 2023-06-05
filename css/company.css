@@ -1,1 +1,55 @@
 @charset "utf-8";
+
+.company {
+}
+.company .inner {
+}
+.company .company-txt-box {
+}
+.company .company-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 500px;
+  gap: 0 20px;
+}
+.company .company-list .company-box {
+}
+.company .company-list .company-box > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  padding: 50px;
+}
+.company .company-list .company-box .company-qa {
+  background: #0072ff;
+}
+.company .company-list .company-box .company-qa .qa-image {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+}
+.company .company-list .company-box .company-about {
+  background: url(../images/cpn_bg.jpg) no-repeat center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1200px) {
+  .company .company-list {
+    gap: 0 10px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .company .company-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: 280px 280px;
+    gap: 10px 0;
+  }
+  .company .company-list .company-box > div {
+    overflow: hidden;
+  }
+  .company .company-list .company-box .company-qa .qa-image {
+    bottom: 0;
+    opacity: 0.8;
+  }
+}
