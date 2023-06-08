@@ -1,55 +1,94 @@
-@charset "utf-8";
-
-.company {
+.company .inner .company-list {
+  display: flex;
+  gap: 0 15px;
 }
-.company .inner {
-}
-.company .company-txt-box {
-}
-.company .company-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px;
-  gap: 0 20px;
-}
-.company .company-list .company-box {
-}
-.company .company-list .company-box > div {
+.company .inner .company-list .company-box {
   position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  padding: 50px;
-}
-.company .company-list .company-box .company-qa {
+  width: 50%;
+  padding-bottom: 15%;
+  max-height: 500px;
   background: #0072ff;
+  border-radius: 25px;
 }
-.company .company-list .company-box .company-qa .qa-image {
+.company .inner .company-list .company-box .company-txt {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 8%;
+  line-height: 1.5;
+}
+.company .inner .company-list .company-box .company-txt span {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.company .inner .company-list .company-box .company-txt h3 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+.company .inner .company-list .company-box .company-txt a {
+  display: inline-block;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  height: 5.2rem;
+  line-height: 5.2rem;
+  border-radius: 3rem;
+  padding: 0 2.5rem;
+  padding-right: 75px;
+}
+.company .inner .company-list .company-box .company-txt a span {
+  display: inline-block;
   position: absolute;
-  bottom: -15px;
-  right: 0;
+  right: 10px;
+  width: 25px;
+  height: 100%;
+  overflow: hidden;
 }
-.company .company-list .company-box .company-about {
-  background: url(../images/cpn_bg.jpg) no-repeat center;
+.company .inner .company-list .company-box .company-txt a span i {
+  font-size: 1.3rem;
+  vertical-align: 1px;
+}
+.company .inner .company-list .company-box .company-txt a:hover span i {
+  animation: icon-ani 0.5s ease-in;
+}
+.company .inner .company-list .company-box .qa-image {
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+}
+.company .inner .company-list .company-about {
+  background: url("../images/cpn_bg.jpg") no-repeat center;
   background-size: cover;
 }
 
-@media screen and (max-width: 1200px) {
-  .company .company-list {
-    gap: 0 10px;
-  }
-}
-@media screen and (max-width: 760px) {
-  .company .company-list {
-    grid-template-columns: 1fr;
-    grid-template-rows: 280px 280px;
+@media screen and (max-width: 1024px) {
+  .company .inner .company-list {
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px 0;
   }
-  .company .company-list .company-box > div {
+  .company .inner .company-list .company-box {
+    width: 100%;
+    padding-bottom: 7%;
     overflow: hidden;
   }
-  .company .company-list .company-box .company-qa .qa-image {
+  .company .inner .company-list .company-box .company-txt {
+    padding: 30px;
+  }
+  .company .inner .company-list .company-box .qa-image {
     bottom: 0;
     opacity: 0.8;
   }
-}
+  .company .inner .company-list .company-qa .company-txt a {
+    background: #fff;
+    color: #0072ff;
+  }
+  .company .inner .company-list .company-about .company-txt a {
+    background: #000;
+  }
+}/*# sourceMappingURL=company.css.map */

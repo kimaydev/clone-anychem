@@ -1,0 +1,119 @@
+.company {
+  .inner {
+    .company-list {
+      display: flex;
+      gap: 0 15px;
+      .company-box {
+        position: relative;
+        width: 50%;
+        padding-bottom: 15%;
+        max-height: 500px;
+        background: #0072ff;
+        border-radius: 25px;
+        .company-txt {
+          position: relative;
+          z-index: 1;
+          color: #fff;
+          padding: 8%;
+          line-height: 1.5;
+          span {
+            display: inline-block;
+            margin: {
+              bottom: 15px;
+            }
+            font: {
+              size: 1.7rem;
+              weight: 500;
+            }
+          }
+          h3 {
+            font: {
+              size: 2.7rem;
+              weight: 700;
+            }
+            margin: {
+              bottom: 35px;
+            }
+          }
+          a {
+            display: inline-block;
+            position: relative;
+            font: {
+              size: 1.5rem;
+              weight: 500;
+            }
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+            height: 5.2rem;
+            line-height: 5.2rem;
+            border-radius: 3rem;
+            padding: 0 2.5rem;
+            padding-right: 75px;
+            span {
+              display: inline-block;
+              position: absolute;
+              right: 10px;
+              width: 25px;
+              height: 100%;
+              overflow: hidden;
+              i {
+                font-size: 1.3rem;
+                vertical-align: 1px;
+              }
+            }
+            &:hover span i {
+              animation: icon-ani 0.5s ease-in;
+            }
+          }
+        }
+        .qa-image {
+          position: absolute;
+          right: 0;
+          bottom: -15px;
+        }
+      }
+      .company-about {
+        background: url("../images/cpn_bg.jpg") no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .company {
+    .inner {
+      .company-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 0;
+        .company-box {
+          width: 100%;
+          padding-bottom: 7%;
+          overflow: hidden;
+          .company-txt {
+            padding: 30px;
+          }
+          .qa-image {
+            bottom: 0;
+            opacity: 0.8;
+          }
+        }
+        .company-qa {
+          .company-txt {
+            a {
+              background: #fff;
+              color: #0072ff;
+            }
+          }
+        }
+        .company-about {
+          .company-txt {
+            a {
+              background: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

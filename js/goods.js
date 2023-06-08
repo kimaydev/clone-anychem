@@ -61,17 +61,23 @@ window.addEventListener("load", function () {
         nextEl: ".sw-goods-next",
       },
       breakpoints: {
-        480: {
+        550: {
           slidesPerView: 1,
-          spaceBetween: 30,
+          spaceBetween: 20,
         },
-        768: {
+        750: {
           slidesPerView: 2,
           spaceBetween: 30,
         },
-        1400: {
+        1024: {
           slidesPerView: 3,
-          spaceBetween: 50,
+          spaceBetween: 30,
+        },
+        1300: {
+          slidesPerView: 2,
+        },
+        1500: {
+          slidesPerView: 3,
         },
       },
     });
