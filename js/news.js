@@ -20,11 +20,11 @@ window.addEventListener("load", function () {
 			<div class="swiper-slide">
         <div class="news-box">
           <a href="${item.link}">
-            <span>${item.cate}</span>
+            <span class="news-cate">${item.cate}</span>
             <p>
               ${item.title}
             </p>
-            <span>
+            <span class="news-date">
               <i class="fa-regular fa-clock"></i>
               ${item.date}
             </span>
@@ -33,6 +33,33 @@ window.addEventListener("load", function () {
       </div>
 			`;
       html += tag;
+    });
+    const newsWrap = document.querySelector(".sw-news .swiper-wrapper");
+    newsWrap.innerHTML = html;
+
+    // swiper 생성
+    new Swiper(".sw-news", {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      loop: true,
+      speed: 800,
+      pagination: {
+        el: ".sw-news-pagination",
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        770: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+      },
     });
   };
   getNews();
