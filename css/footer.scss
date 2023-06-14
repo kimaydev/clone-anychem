@@ -1,0 +1,137 @@
+.footer {
+  background: #131618;
+  font-size: 1.4rem;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 0;
+    .footer-addr {
+      h2 {
+        font: {
+          size: 1.7rem;
+        }
+        color: #fff;
+      }
+      .info-btn {
+        display: flex;
+        gap: 0 5px;
+        margin: 25px 0;
+        li {
+          a {
+            display: inline-block;
+            color: #fff;
+            padding: 10px;
+            border: 1px solid #fff;
+            border-radius: 20px;
+            &.privacy {
+              border-color: #0072ff;
+              color: #0072ff;
+            }
+            &.promise {
+            }
+          }
+        }
+      }
+      .info-list {
+        li {
+          margin-bottom: 10px;
+          span {
+            display: inline-block;
+            &::after {
+              content: "";
+              width: 1px;
+              height: 10px;
+              background: rgba(255, 255, 255, 0.3);
+              display: inline-block;
+              margin: 0 10px;
+              vertical-align: 0.5px;
+            }
+            &:last-child::after {
+              display: none;
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .copyright {
+        margin-top: 25px;
+      }
+      .site-link {
+        display: flex;
+        margin-top: 40px;
+        gap: 0 10px;
+        li {
+          a {
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+    }
+    .footer-sitemap {
+      a {
+        color: #fff;
+        display: block;
+      }
+      .site-map {
+        display: flex;
+        align-items: flex-start;
+        gap: 0 35px;
+        li {
+          .site-map-main {
+            margin-bottom: 25px;
+          }
+          .site-map-sub {
+            a {
+              color: #777;
+              margin-bottom: 13px;
+            }
+            li:last-child a {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1560px) {
+  .footer {
+    .inner {
+      padding: 60px 30px;
+      .footer-sitemap {
+        .site-map {
+          gap: 0 25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    .inner {
+      .footer-sitemap {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .footer {
+    .inner {
+      justify-content: center;
+      text-align: center;
+      .footer-addr {
+        .info-btn {
+          justify-content: center;
+        }
+        .site-link {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

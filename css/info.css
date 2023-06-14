@@ -4,7 +4,7 @@
   margin-top: 130px;
 }
 .info .inner {
-  padding: 60px 30px;
+  padding: 60px 0;
 }
 .info .inner .info-wrap {
   display: flex;
@@ -103,6 +103,11 @@
   color: #006aec;
 }
 
+@media screen and (max-width: 1560px) {
+  .info .inner {
+    padding: 60px 30px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .info .inner .info-wrap .info-notice-box {
     padding-right: 15px;

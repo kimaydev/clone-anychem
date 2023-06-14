@@ -1,1 +1,107 @@
-@charset "utf-8";
+.footer {
+  background: #131618;
+  font-size: 1.4rem;
+}
+.footer .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 0;
+}
+.footer .inner .footer-addr h2 {
+  font-size: 1.7rem;
+  color: #fff;
+}
+.footer .inner .footer-addr .info-btn {
+  display: flex;
+  gap: 0 5px;
+  margin: 25px 0;
+}
+.footer .inner .footer-addr .info-btn li a {
+  display: inline-block;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+.footer .inner .footer-addr .info-btn li a.privacy {
+  border-color: #0072ff;
+  color: #0072ff;
+}
+.footer .inner .footer-addr .info-list li {
+  margin-bottom: 10px;
+}
+.footer .inner .footer-addr .info-list li span {
+  display: inline-block;
+}
+.footer .inner .footer-addr .info-list li span::after {
+  content: "";
+  width: 1px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: 0.5px;
+}
+.footer .inner .footer-addr .info-list li span:last-child::after {
+  display: none;
+}
+.footer .inner .footer-addr .info-list li:last-child {
+  margin-bottom: 0;
+}
+.footer .inner .footer-addr .copyright {
+  margin-top: 25px;
+}
+.footer .inner .footer-addr .site-link {
+  display: flex;
+  margin-top: 40px;
+  gap: 0 10px;
+}
+.footer .inner .footer-addr .site-link li a {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer .inner .footer-sitemap a {
+  color: #fff;
+  display: block;
+}
+.footer .inner .footer-sitemap .site-map {
+  display: flex;
+  align-items: flex-start;
+  gap: 0 35px;
+}
+.footer .inner .footer-sitemap .site-map li .site-map-main {
+  margin-bottom: 25px;
+}
+.footer .inner .footer-sitemap .site-map li .site-map-sub a {
+  color: #777;
+  margin-bottom: 13px;
+}
+.footer .inner .footer-sitemap .site-map li .site-map-sub li:last-child a {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1560px) {
+  .footer .inner {
+    padding: 60px 30px;
+  }
+  .footer .inner .footer-sitemap .site-map {
+    gap: 0 25px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer .inner .footer-sitemap {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  .footer .inner {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer .inner .footer-addr .info-btn {
+    justify-content: center;
+  }
+  .footer .inner .footer-addr .site-link {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=footer.css.map */

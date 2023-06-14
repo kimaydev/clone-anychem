@@ -3,7 +3,7 @@
   padding-top: 0;
   margin-top: 130px;
   .inner {
-    padding: 60px 30px;
+    padding: 60px 0;
     .info-wrap {
       display: flex;
       align-items: flex-start;
@@ -120,7 +120,13 @@
     }
   }
 }
-
+@media screen and (max-width: 1560px) {
+  .info {
+    .inner {
+      padding: 60px 30px;
+    }
+  }
+}
 @media screen and (max-width: 1200px) {
   .info {
     .inner {
